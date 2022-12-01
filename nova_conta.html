@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder</title>
+    <link rel="stylesheet" type="text/css" href="css.css"/>
+</head>
+<body>
+    <main>
+        <section class="logo">
+            <img class="logo" src="img/logo.png">
+        </section>  
+        <section class="formulario nova-conta">
+            <form name="criacao-conta">
+                <h2>Criar Conta</h2>
+                <hr>
+                <div class="erro">
+                    <input type="text" maxlength="10" class="input-login" placeholder="Login" required>
+                    <div id="erro-login">
+                        <h3>O login precisa ter:</h3>
+                        <ul>
+                            <li><img src="img/confirmacao.png" id="img-login-digitos">Pelo menos 4 dígitos.</li>
+                            <li><img src="img/confirmacao.png" id="img-login-minusculo">Somente letras minúsculas.</li>
+                            <li><img src="img/confirmacao.png" id="img-login-repetido">O login precisa estar disponível.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="erro">
+                    <input type="password" maxlength="15" class="input-senha" placeholder="Senha" required>
+                    <div id="erro-senha">
+                        <h3>A senha precisa ter:</h3>
+                        <ul>
+                            <li><img src="img/confirmacao.png" id="img-senha-digitos">Pelo menos 4 dígitos.</li>
+                            <li><img src="img/confirmacao.png" id="img-senha-letra-numero">Pelo menos um número e uma letra.</li>
+                            <li><img src="img/confirmacao.png" id="img-senha-senhas-iguais">Ambas as senhas precisam ser iguais.</li>
+                        </ul>
+                    </div>
+                </div>
+                <input type="password" maxlength="15" class="repita-input-senha" placeholder="Repita a Senha" required>
+                <button onclick="botaoMaior('button')" type="submit" id="botao-padrao"><h3>Criar Conta</h3></button>
+                <a href="index.html" targe="_self"><h4>Já tenho uma conta</h4></a>
+            </form>
+        </section>  
+    </main>
+    <footer>
+        <h3>Organizando o presente para garantir sucesso ao seu futuro!</h3>
+    </footer>
+    <script src="cadastro.js"></script>
+</body>
+</html>

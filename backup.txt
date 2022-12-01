@@ -1,0 +1,4 @@
+Senha precisa ter:
+- Pelo menos 4 digitos.
+- Pelo menos um número e uma letra.
+- Ambas as senhas precisam ser iguais

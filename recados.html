@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder</title>
+    <link rel="stylesheet" type="text/css" href="css.css"/>
+</head>
+<body>
+    <header>
+        <div class="logo-menor">
+            <img class="logo" src="img/logo_menor.png">
+        </div>  
+        <div class="painel-conta">
+            <div class="icone-usuario">
+                <img src="img/icone-usuario.png">
+                <h3 id="nome-usuario"></h3>
+            </div>
+            <div class="botao-sair">
+                <img src="img/erro.png" onclick="botaoMenor(this); botaoDeslogar()">
+            </div>
+            <div class="botao-exclusao">
+                <img src="img/exclusao.png" onclick="botaoMenor(this); notificacaoExclusaoConta(true)">
+            </div>
+        </div>
+    </header>
+    <main class="recados">
+        <section class="barra-titulo">
+            <div class="titulo">
+                <h1>Lembretes</h1>
+            </div>
+            <div class="secao-adicionar">
+                <div class="botao-adicionar">
+                    <img src="img/botao-adicionar.png" onmouseover="botaoAdicionarHover('ON')" onmouseout="botaoAdicionarHover('OFF')" onclick="adicionarLembrete()">
+                    <button onmouseover="botaoAdicionarHover('ON')" onmouseout="botaoAdicionarHover('OFF')" onclick="adicionarLembrete()"><h3>Adicionar</h3></button>
+                </div>
+            </div>
+        </section>
+        <section class="notifi-exclusao-conta">
+            <div class="main-exclusao">
+                <h2>Tem certeza que deseja excluir sua conta?</h2>
+                <div class="botoes">
+                    <button class="botao-confirmar" onclick="botaoMaior(this); excluirConta()">Confirmar</button>
+                    <button type="button" class="botao-cancelar" onclick="notificacaoExclusaoConta(false); botaoMaior(this)">Cancelar</button>
+                </div>
+            </div>
+        </section>
+        <section class="menu lembretes">
+            <form>
+                <table>
+                    <tr>
+                        <th class="acao"><span>Ação: </span><input type="text" maxlength="21" required autocomplete="off" id="input-acao"></th>
+                        <th><span>Data: </span><input type="date" min="2022-11-23" max="2100-11-23" maxlength="8" required id="input-data"></th>
+                        <th><span>Hora(s): </span><input type="time" required id="input-hora"></th>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="sombra"><span>Descrição: </span><textarea maxlength="66" required autocomplete="off" id="input-descricao"></textarea></th>
+                    </tr>
+                </table>
+                <div class="botoes">
+                    <button class="botao-confirmar" onclick="botaoMaior(this)">Confirmar</button>
+                    <button type="button" class="botao-cancelar" onclick="cancelaLembrete(); botaoMaior(this)">Cancelar</button>
+                </div>
+            </form>
+        </section>
+        <section class="lembretes">
+            <div class="aviso-base">
+                <div>
+                    <h2>Você ainda não tem lembretes...</h2>
+                    <h2>Clique em "adicionar" para criar um!</h2>
+                </div>
+            </div>
+            <table id="tabela-lembretes">
+            </table>
+        </section>
+    </main>
+    <footer class="recados"></footer>
+    <script src="recados.js"></script>
+</body>
+</html>
