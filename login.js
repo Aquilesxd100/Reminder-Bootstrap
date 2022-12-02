@@ -16,7 +16,7 @@ if (sessionStorage.notificacao) {
     aviso.classList.add("novaContaAviso");
     setTimeout(() => {
         aviso.style.display="none";  
-    }, 5500)
+    }, 6000)
 }
 formulario.addEventListener("submit", (event) => {
     event.preventDefault();

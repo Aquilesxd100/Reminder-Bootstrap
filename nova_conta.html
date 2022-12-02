@@ -16,31 +16,25 @@
         <section class="formulario nova-conta">
             <form name="criacao-conta">
                 <h2>Criar Conta</h2>
-                <hr>
-                <div class="erro">
-                    <input type="text" maxlength="10" class="input-login" placeholder="Login" required>
-                    <div id="erro-login">
-                        <h3>O login precisa ter:</h3>
-                        <ul>
-                            <li><img src="img/confirmacao.png" id="img-login-digitos">Pelo menos 4 dígitos.</li>
-                            <li><img src="img/confirmacao.png" id="img-login-minusculo">Somente letras minúsculas.</li>
-                            <li><img src="img/confirmacao.png" id="img-login-repetido">O login precisa estar disponível.</li>
-                        </ul>
-                    </div>
+                <hr class="mt-0">
+                <div class="mb-1">
+                        <input type="text" maxlength="10" class="input-login form-control" placeholder="Login" required>
                 </div>
-                <div class="erro">
-                    <input type="password" maxlength="15" class="input-senha" placeholder="Senha" required>
-                    <div id="erro-senha">
-                        <h3>A senha precisa ter:</h3>
-                        <ul>
-                            <li><img src="img/confirmacao.png" id="img-senha-digitos">Pelo menos 4 dígitos.</li>
-                            <li><img src="img/confirmacao.png" id="img-senha-letra-numero">Pelo menos um número e uma letra.</li>
-                            <li><img src="img/confirmacao.png" id="img-senha-senhas-iguais">Ambas as senhas precisam ser iguais.</li>
-                        </ul>
-                    </div>
+                <div class="invalid-feedback login-erro-disponibilidade mb-1">
+                    - O login precisa estar disponível!
                 </div>
-                <input type="password" maxlength="15" class="repita-input-senha" placeholder="Repita a Senha" required>
-                <button onclick="botaoMaior('button')" type="submit" id="botao-padrao"><h3>Criar Conta</h3></button>
+                <div class="mb-1">
+                    <input type="password" maxlength="15" class="input-senha form-control" placeholder="Senha" required>
+                </div>
+                <div class="invalid-feedback senha-erro-diferentes mb-1">
+                    - Ambas as senhas precisam ser iguais!
+                </div>
+                <div class="mb-1">
+                    <input type="password" maxlength="15" class="repita-input-senha form-control" placeholder="Repita a Senha" required>
+                </div>
+                <div class="d-grid gap-2 col-8 m-1">
+                    <button class="btn btn-success" onclick="botaoMaior('button')" type="submit" id="botao-padrao">Criar Conta</button>
+                </div>
                 <a href="index.html" targe="_self"><h4>Já tenho uma conta</h4></a>
             </form>
         </section>  
