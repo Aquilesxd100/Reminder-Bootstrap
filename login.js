@@ -3,21 +3,7 @@ const inputSenha = document.querySelector(".input-senha");
 const checkBox = document.getElementById("input-checkbox");
 const formulario = document.querySelector("form");
 const botaoSubmit = document.querySelector("#botao-padrao");
-const erroLogging = document.querySelector("#erro-logar");
-window.addEventListener("click", (event) => {
-    let elementosAlvo = [inputLogin, inputSenha, botaoSubmit, erroLogging];
-    let clickFora = 0;
-    for (c = 0; c < elementosAlvo.length; c++) {
-        if (elementosAlvo[c].contains(event.target)) {
-        }
-        else {
-            clickFora++;
-        }
-    }
-    if (clickFora === elementosAlvo.length) {
-        erroLogging.style.opacity="0";
-    }
-})
+const erroLogging = document.querySelector(".invalid-feedback");
 if (sessionStorage.contaLogada || localStorage.contaLogada) {
     window.open("recados.html", "_self");
 }
@@ -53,17 +39,18 @@ formulario.addEventListener("submit", (event) => {
             window.open("recados.html", "_self");
         }
         else {
-            erroLogging.style.opacity="1";
             inputLogin.style.border="2px solid #FF0000";
             inputSenha.style.border="2px solid #FF0000";
+            erroLogging.style.display="block";
         }
     }
     else {
-        erroLogging.style.opacity="1";
         inputLogin.style.border="2px solid #FF0000";
         inputSenha.style.border="2px solid #FF0000";
+        erroLogging.style.display="block";
     }
 });
+
 // Efeitos Visuais //
 function displayOn () {
     if (inputLogin.value === "") {

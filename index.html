@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reminder</title>
     <link rel="stylesheet" type="text/css" href="css.css"/>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
 </head>
 <body>
     <div class="notificacao">
@@ -16,23 +17,24 @@
             <img class="logo" src="img/logo.png">
         </section>  
         <section class="formulario">
-            <form name="logging">
+            <form name="logging" class="needs-validation" novalidate>
                 <h2>Entrar</h2>
-                <hr>
-                <input type="text" maxlength="10" class="input-login" placeholder="Login" required>
-                <div class="erro">
-                    <div id="erro-logar">
-                        <h3>ERRO:</h3>
-                        <ul>
-                            <li><img src="img/erro.png" id="img-login-digitos">Login ou senha inválido.</li>
-                        </ul>
-                    </div>
-                    <input type="password" maxlength="15" class="input-senha" placeholder="Senha" required>
+                <hr class="mt-0">
+                <div class="mb-2">
+                    <input type="text" maxlength="10" class="input-login form-control" placeholder="Login" required>
                 </div>
-                <button onclick="botaoMaior('button')" type="submit" id="botao-padrao"><h3>Entrar</h3></button>
-                <div class="manter-logado">
-                    <input type="checkbox" id="input-checkbox">
-                    <label for="input-checkbox">Manter-me conectado</label>
+                <div class="mb-1">
+                    <input type="password" maxlength="15" class="input-senha form-control" placeholder="Senha" required>
+                    <div class="invalid-feedback">
+                        Login ou senha inválido(s)!
+                    </div>
+                </div>
+                <div class="d-grid gap-2 col-8 m-1">
+                    <button class="btn btn-success" onclick="botaoMaior('button')" type="submit" id="botao-padrao">Entrar</button>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="input-checkbox">
+                    <label class="form-check-label" for="input-checkbox">Manter-me conectado</label>
                 </div>
                 <a href="nova_conta.html" targe="_self"><h4>Criar Conta</h4></a>
             </form>
@@ -42,5 +44,6 @@
         <h3>Organizando o presente para garantir sucesso ao seu futuro!</h3>
     </footer>
     <script src="login.js"></script>
+    <script src="bootstrap.bundle.js"></script>
 </body>
 </html>
