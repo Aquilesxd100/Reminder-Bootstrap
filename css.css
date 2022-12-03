@@ -67,50 +67,6 @@ section.formulario hr {
     z-index: 1000;
     text-align: center;
 }
-/* .notificacao h3 {
-    font-size: calc(11px + 1vw);
-    color: #4FFF4F;
-    letter-spacing: 0.1vw;
-    text-align: center;
-    margin-top: calc(8.5vh - 8px);
-} */
-/* .notificacao h3 img {
-    position: relative;
-    top: 0.3vw;
-    margin-right: 5px;
-    width: calc(1.5vw + 2px);
-    margin: 0 5px;
-} */
-/* .notificacao span {
-    margin: 0 5px;
-} */
-/* div.manter-logado {
-    font-size: calc(5px + 1vw);
-    text-shadow: 1px 0 0 rgb(0, 0, 0), -1px 0 0 rgb(0, 0, 0), 0 1px 0 rgb(0, 0, 0),  0 -1px 0 rgb(0, 0, 0),  0 0 1px rgb(0, 0, 0);
-    font-family: comic;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    color: #72D1E2;
-    width: 20vw;
-    min-width: 200px;
-    margin: 0.5% 1% 1% 1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-/* section.formulario form div.manter-logado input {
-    width: auto;
-    height: auto;
-    margin: 8px;
-    transform: scale(1.7);
-    box-shadow: none; 
-    background-color: #E6F7FA;
-} */
-/* div.manter-logado label {
-    white-space: nowrap;
-    padding-bottom: 0.2vw;
-    user-select: none;
-} */
 /* Nova Conta */
 body section.nova-conta {
     background-image: url("img/nova_conta.png");
@@ -233,13 +189,6 @@ main.recados section.barra-titulo img {
     filter: brightness(0.9);
     z-index: 1000;
 }
-/* main.recados section.barra-titulo button {
-    margin: 1% 5% 0.5% 5%;
-    padding: 2px 10px 4px 35px;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    background-color: #03d103;
-} */
 main.recados section.barra-titulo h1 {
     font-family: comicbd;
     font-size: calc(23px + 1.5vw);
@@ -290,18 +239,6 @@ section.lembretes table th {
 section.lembretes table th.sombra {
     box-shadow: 4px 3.5px 3.5px #000000;
 }
-/* section.lembretes table th button {
-    font-family: comicbd;
-    font-size: calc(7px + 1vw);
-    text-shadow: 1.5px 0 0 rgb(0, 0, 0), -1.5px 0 0 rgb(0, 0, 0), 0 1.5px 0 rgb(0, 0, 0),  0 -1.5px 0 rgb(0, 0, 0),  0 0 1.5px rgb(0, 0, 0);
-    color: #FFFFFF;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    box-shadow: 1.5px 1px 1px #000000; 
-    padding: 0.1vw 0.5vw 0.4vw 0.5vw;
-    letter-spacing: 0.3px;
-    margin: 0 0.1vw;
-} */
 body section.lembretes table th button:hover {
     cursor: pointer;
 }
@@ -310,16 +247,6 @@ section.lembretes table th.botoes {
     width: 18%;
     min-width: 190px;
 } 
-/* section.lembretes table th button.botao-editar {
-    background-color: #FFCC00;
-    filter: brightness(0.95);
-    transform: translateZ(0);
-}
-section.lembretes table th button.botao-apagar {
-    background-color: #e92b15;
-    filter: brightness(0.9);
-    transform: translateZ(0);
-}  */
 section.lembretes table th.acao {
     max-width: 39%;
 }
@@ -361,56 +288,15 @@ section.menu input, section.menu textarea {
     font-size: calc(3px + 1.4vw);
     text-transform: lowercase;
     width: auto;
-    /* height: 3vw;
-    margin: 0;
-    padding: 0px 5px;
-    border: 2px solid #859CDF;
-    box-shadow: 2px 1.5px 1.5px; 
-    background-color: #E6F7FA; */
 }
 section.menu input#input-acao {
     width: 80%;
 }
-/* section.menu input:focus, section.menu textarea:focus {
-    outline: none;
-}
-section.menu table textarea {
-    width: 80%;
-    height: 12vh;
-    min-height: 80px; 
-}
-*
-/* body section.menu textarea {
-    width: 100%;
-    border: 2px solid #859CDF;
-    padding: 0 5px;
-    resize: none;
-} */
 section.menu form div.botoes, section.notifi-exclusao-conta div.botoes {
     display: inline-block;
     width: 100%;
     text-align: center;
 }
-/* section.menu button, section.notifi-exclusao-conta button {
-    font-family: comicbd;
-    font-size: calc(11px + 1.2vw);
-    text-shadow: 1.5px 0 0 rgb(0, 0, 0), -1.5px 0 0 rgb(0, 0, 0), 0 1.5px 0 rgb(0, 0, 0),  0 -1.5px 0 rgb(0, 0, 0),  0 0 1.5px rgb(0, 0, 0);
-    color: #FFFFFF;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    box-shadow: 1.5px 1px 1px #000000; 
-    padding: 0.1vw 6vw 0.4vw 6vw;
-    letter-spacing: 0.3px;
-    margin: 0 0.5%;
-} */
-/* section.menu button.botao-confirmar, section.notifi-exclusao-conta button.botao-confirmar {
-    background-color: #0de80d;
-    filter: brightness(0.8);
-}
-section.menu button.botao-cancelar, section.notifi-exclusao-conta button.botao-cancelar {
-    background-color: #e92b15;
-    filter: brightness(0.9);
-}  */
 section.menu form button:hover, section.notifi-exclusao-conta button:hover {
     cursor: pointer;
 }
@@ -508,16 +394,6 @@ section.formulario form {
     flex-direction: column;
     align-items: center;
 }
-/* section.formulario form input {
-    font-size: calc(5px + 1.4vw);
-    width: 80%;
-    height: 3vw;
-    margin: 2% 10%;
-    padding: 0 2%;
-    border: 2px solid #2296AA;
-    box-shadow: 2px 1.5px 1.5px; 
-    background-color: #E6F7FA;
-} */
 input.input-login {
     text-transform: lowercase;
 }
@@ -527,21 +403,8 @@ section.formulario form input::placeholder {
     color: #BBBBBB;
     text-transform: none;
 }
-/* section.formulario form input:focus {
-    outline: none;
-} */
-/* section.formulario form button {
-    margin: 1% 5% 0.5% 5%;
-    width: 90%;
-    border: 3px solid #00BB00;
-    border-radius: 5px;
-    box-shadow: 2px 1.5px 1.5px; 
-    background-color: #00BB00;
-} */
 section.formulario form button:hover {
     cursor: pointer;
-/*     background-color: #00E100;
-    border: 3px solid #00E100; */
 }
 section.logo img {
     left: 0; 
@@ -662,6 +525,11 @@ footer h3 {
         font-size: 20px;
         color: #BAC7ED;
     }
+    section.lembretes table th.descricao {
+        overflow-wrap: break-word;
+        max-width: 90vw;
+        min-width: 100%;
+    }
     section.lembretes div.aviso-base div {
         padding: 17.5vw 4vw 8.5vw 4vw;
     }
@@ -674,9 +542,12 @@ footer h3 {
         padding: 5px 10px;
     }
     section.lembretes table tr.acao-data-hora th {
-        width: 50%;
+        width: 53%;
         border-left: solid #859CDF 4px;
         border-bottom: solid #859CDF 4px;
+    }
+    section.lembretes table tr.acao-data-hora th.hora {
+        width: 47%;
     }
     section.lembretes table tr.acao-data-hora th.hora {
         border-right: solid #859CDF 4px;
@@ -723,7 +594,15 @@ footer h3 {
         box-shadow: 0px 2.5px 2.5px rgba(0, 0, 0, 0.8);
     }
     section.lembretes th {
-        font-size: 15px;
+        font-size: 16px;
+    }
+    section.lembretes table tr.espacamento th {
+        height: 3vh;
+    }
+    footer.recados {
+        display: block;
+        height: 20px;
+        min-height: 0;
     }
 }
 /* Animações */
