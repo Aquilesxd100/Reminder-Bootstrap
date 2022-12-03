@@ -39,21 +39,27 @@ function listarLembretes() {
         let lembretesOrganizados = ordenarPorData(bancoDados[posicao].lembretes);
         for (lembrete of lembretesOrganizados) {
             localLembretes.innerHTML +=            
-            `<tr>
+            `<tr class="acao-data-hora sombra-lateral">
                 <th class="acao"><span>Ação: </span>${lembrete.acao}</th>
                 <th><span>Data: </span>${lembrete.data}</th>
-                <th><span>Hora(s): </span>${lembrete.hora}</th>
-                <th class="botoes sombra">
-                    <button class="botao-editar" onclick="editar('${lembrete.id}'); botaoMaior(this)">Editar</button>
-                    <button class="botao-apagar" onclick="apagar('${lembrete.id}'); botaoMaior(this)">Apagar</button>
+                <th class="hora"><span>Hora(s): </span>${lembrete.hora}</th>
+                <th class="botoes sombra desktop">
+                    <button class="botao-editar btn-warning btn btn-sm" onclick="editar('${lembrete.id}'); botaoMaior(this)">Editar</button>
+                    <button class="botao-apagar btn-danger btn btn-sm" onclick="apagar('${lembrete.id}'); botaoMaior(this)">Apagar</button>
                 </th>
             </tr>
-            <tr>
-                <th colspan="4" class="sombra"><span>Descrição: </span>${lembrete.descricao}</th>
+            <tr class="sombra-lateral">
+                <th colspan="4" class="sombra descricao"><span>Descrição: </span>${lembrete.descricao}</th>
+            </tr>
+            <tr class="mobile">
+                <th class="botoes d-flex justify-content-center">
+                    <button class="botao-editar btn-warning btn btn-sm mx-2" onclick="editar('${lembrete.id}'); botaoMaior(this)">Editar</button>
+                    <button class="botao-apagar btn-danger btn btn-sm mx-2" onclick="apagar('${lembrete.id}'); botaoMaior(this)">Apagar</button>
+                </th>
             </tr>
             <tr class="espacamento"> 
                <th colspan="4"></th>
-            </tr>`;
+            </tr>`;            
         }
     }
     else {

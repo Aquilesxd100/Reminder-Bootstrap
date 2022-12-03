@@ -33,7 +33,7 @@
             </div>
             <div class="secao-adicionar">
                 <div class="botao-adicionar">
-                    <button onclick="adicionarLembrete()" class="btn btn-success"><h3>Adicionar</h3></button>
+                    <button onclick="adicionarLembrete()" class="btn btn-success btn-sm"><h3>Adicionar</h3></button>
                 </div>
             </div>
         </section>
@@ -49,18 +49,27 @@
         <section class="menu lembretes">
             <form>
                 <table>
-                    <tr>
-                        <th class="acao"><span>Ação: </span><input type="text" maxlength="21" required autocomplete="off" id="input-acao" class="form-control px-1 d-inline-block"></th>
-                        <th><span>Data: </span><input type="date" min="2022-11-23" max="2100-11-23" maxlength="8" required id="input-data" class="form-control d-inline-block"></th>
-                        <th><span>Hora(s): </span><input type="time" required id="input-hora" class="form-control d-inline-block"></th>
+                    <tr class="acao-data-hora">
+                        <th class="acao">
+                            <label for="input-acao" class="form-label">Ação:</label>
+                            <input type="text" maxlength="21" required autocomplete="off" id="input-acao" class="form-control px-1 d-inline-block">
+                        </th>
+                        <th>
+                            <label for="input-data" class="form-label">Data:</label> 
+                            <input type="date" min="2022-11-23" max="2100-11-23" maxlength="8" required id="input-data" class="form-control d-inline-block">
+                        </th>
+                        <th class="hora">
+                            <label for="input-hora" class="form-label">Hora(s):</label>
+                            <input type="time" required id="input-hora" class="form-control d-inline-block">
+                        </th>
                     </tr>
                     <tr>
-                        <th colspan="4" class="sombra"><span>Descrição: </span><textarea maxlength="66" required autocomplete="off" id="input-descricao" class="w-100 px-1 form-control"></textarea></th>
+                        <th colspan="4" class="sombra descricao"><label for="input-descricao" class="form-label">Descrição:</label><textarea maxlength="66" required autocomplete="off" id="input-descricao" class="w-100 px-1 form-control"></textarea></th>
                     </tr>
                 </table>
                 <div class="botoes">
-                    <button class="botao-confirmar btn btn-success px-5 mx-2" onclick="botaoMaior(this)">Confirmar</button>
-                    <button type="button" class="botao-cancelar btn btn-danger px-5 mx-2" onclick="cancelaLembrete(); botaoMaior(this)">Cancelar</button>
+                    <button class="botao-confirmar btn btn-success px-5 mx-2 my-md-0 my-1" onclick="botaoMaior(this)">Confirmar</button>
+                    <button type="button" class="botao-cancelar btn btn-danger px-5 mx-2 my-md-0 my-1" onclick="cancelaLembrete(); botaoMaior(this)">Cancelar</button>
                 </div>
             </form>
         </section>

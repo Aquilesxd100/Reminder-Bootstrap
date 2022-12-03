@@ -14,6 +14,9 @@
 .invalid-feedback {
     text-align: center;
 }
+.mobile {
+    display: none;
+}
 * {
     margin: 0;
     padding: 0;
@@ -262,6 +265,11 @@ section.lembretes table {
     font-weight: lighter;
     font-size: calc(1px + 1.4vw); 
 }
+section.lembretes table label {
+    font-size: calc(3px + 1.4vw);
+    font-family: comicbd;
+    color: #BAC7ED;
+}
 section.lembretes table span {
     font-size: calc(3px + 1.4vw);
     font-family: comicbd;
@@ -271,7 +279,7 @@ section.lembretes table span {
     section.lembretes table {
         font-size: calc(2px + 1.4vw);
     }
-    section.lembretes table span {
+    section.lembretes table label {
         font-size: calc(5px + 1.4vw);
     }
 }
@@ -604,6 +612,15 @@ footer h3 {
         font-size: calc(12px + 2.2vw);
     }
     /* Recados */
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    main.recados section.barra-titulo h1 {
+        font-size: calc(15px + 1.8vw);
+    }
     div.logo-menor img {
         width: 25vw;
         margin: 3.5vw;
@@ -636,8 +653,77 @@ footer h3 {
     section.lembretes {
         min-height: 62vh;
     }
+    section.lembretes table label {
+        font-size: 20px;
+        font-family: comicbd;
+        color: #BAC7ED;
+    }
+    section.lembretes table#tabela-lembretes th span {
+        font-size: 20px;
+        color: #BAC7ED;
+    }
     section.lembretes div.aviso-base div {
         padding: 17.5vw 4vw 8.5vw 4vw;
+    }
+    section.lembretes table tr {
+        display: flex;
+        flex-wrap: wrap;
+    } 
+    section.lembretes table th {
+        border: none;
+        padding: 5px 10px;
+    }
+    section.lembretes table tr.acao-data-hora th {
+        width: 50%;
+        border-left: solid #859CDF 4px;
+        border-bottom: solid #859CDF 4px;
+    }
+    section.lembretes table tr.acao-data-hora th.hora {
+        border-right: solid #859CDF 4px;
+    }
+    section.lembretes table tr th.descricao {
+        box-shadow: none;
+    }
+    section.lembretes table tr th.descricao, section.lembretes table tr th.botoes {
+        border-left: solid #859CDF 4px;
+        border-right: solid #859CDF 4px;
+        border-bottom: solid #859CDF 4px;
+        width: 100%;
+    }
+    section.lembretes table tr.acao-data-hora th.acao {
+        width: 100%;
+        max-width: none;
+        border: solid #859CDF 4px;
+    }
+    section.lembretes input#input-acao {
+        width: 96%;
+    }
+    section.lembretes table tr.acao-data-hora input {
+        width: 90%;
+    }
+    section.lembretes table tr.acao-data-hora input {
+        width: 90%;
+    }
+    section.lembretes input, section.lembretes textarea {
+        font-size: 15px;
+    }
+    section.lembretes table textarea {
+        height: 90px;
+    }
+    section.lembretes table th.sombra {
+        box-shadow: 3px 2.5px 2.5px rgba(0, 0, 0, 0.8);
+    }
+    section.lembretes table .sombra-lateral {
+        box-shadow: 3px 0px 2.5px rgba(0, 0, 0, 0.8);
+    }
+    section.lembretes table tr.mobile {
+        box-shadow: 3px 0px 2.5px rgba(0, 0, 0, 0.8);
+    }
+    section.lembretes table th.botoes {
+        box-shadow: 0px 2.5px 2.5px rgba(0, 0, 0, 0.8);
+    }
+    section.lembretes th {
+        font-size: 15px;
     }
 }
 /* Animações */
